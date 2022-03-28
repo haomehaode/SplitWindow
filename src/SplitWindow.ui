@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SplitWindowClass</class>
+ <widget class="QMainWindow" name="SplitWindowClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SplitWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>600</width>
+     <height>23</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="vertical_action"/>
+   <addaction name="horizontal_action"/>
+   <addaction name="delete_action"/>
+   <addaction name="action_add"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="vertical_action">
+   <property name="text">
+    <string>水平分割</string>
+   </property>
+  </action>
+  <action name="horizontal_action">
+   <property name="text">
+    <string>垂直分割</string>
+   </property>
+  </action>
+  <action name="delete_action">
+   <property name="text">
+    <string>删除分割</string>
+   </property>
+  </action>
+  <action name="action_add">
+   <property name="text">
+    <string>添加Label</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="SplitWindow.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>vertical_action</sender>
+   <signal>triggered()</signal>
+   <receiver>SplitWindowClass</receiver>
+   <slot>slot_vertical_splitter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontal_action</sender>
+   <signal>triggered()</signal>
+   <receiver>SplitWindowClass</receiver>
+   <slot>slot_horizontal_splitter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>delete_action</sender>
+   <signal>triggered()</signal>
+   <receiver>SplitWindowClass</receiver>
+   <slot>slot_delete_splitter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_add</sender>
+   <signal>triggered()</signal>
+   <receiver>SplitWindowClass</receiver>
+   <slot>slot_add_label()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>299</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slot_vertical_splitter()</slot>
+  <slot>slot_horizontal_splitter()</slot>
+  <slot>slot_delete_splitter()</slot>
+  <slot>slot_add_label()</slot>
+ </slots>
+</ui>
