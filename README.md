@@ -1,2 +1,3 @@
 SplitWindow
-   动态风格Qt窗口Deno
+
+动态分割Qt窗口Deno
